@@ -1,0 +1,120 @@
+$small-size: 14px;
+/*text*/
+.small-text{
+	font-size:$small-size;
+}
+
+.widespace{
+	letter-spacing: .15em;	
+}
+/*general styling for specific stuff*/
+.invisible-hr{
+	visibility:hidden;
+	margin-top: 1.5em;
+}
+.vertical-center {
+  min-height: 90%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 90vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+.bg-gray{
+	background-color: #eee;
+}
+%borders{
+    border: #707070 solid 2px;
+}
+.image{
+    @extend %borders;
+}
+/*front page specific*/
+#info { 
+    position: fixed; 
+    bottom:0%;
+    width:100%; 
+}
+/*table and form on contacts page*/
+th{
+	padding: 1em;
+	padding-left: 0;
+}
+.input-type{
+	max-width: 75%;
+}
+.icon-style{
+	font-size: 36px;
+}
+/*padding stuff*/
+.no-margin{
+	margin: 0%;
+}
+.slight-padding{
+	margin-bottom: .5em;
+}
+.more-padding{
+	margin-bottom: 1.5em;
+}
+.left-padding{
+	padding-left: 2em;
+}
+.padding-top{
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.padding-bottom{
+	padding-bottom: 1em;
+}
+.top-padding{
+	padding-top: 1em;
+}
+/*Card styling goes here*/
+.card {
+        margin-bottom: 2em;
+        @extend %borders;
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        
+}
+.card-title{
+	opacity:0;
+}
+.card:hover{
+	opacity: 0.8;
+    .card-title{
+        opacity: 1;
+    }
+}
+/*
+.card:hover .card-title{
+	opacity: 1;
+}*/
+/* card styling ends here*/
+
+/*media stuff here*/
+@media (min-width:801px) {
+    #intro::before {
+		content: "hello, world! \A this is megan.";
+    }
+				
+}
+@media (max-width: 800px) {
+    #intro::before {
+		display: block;
+		white-space: pre;
+        content: "hello, world! \A this is megan.";
+    }			
+}
+
+@media (max-width: 575px){
+	#contact-nav-brand::after{
+		content: " /contact";
+	}
+	#resume-nav-brand::after{
+		content: " /resume";
+	}
+	#projects-nav-brand::after{
+		content: " /projects";
+	}
+	
+}

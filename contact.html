@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Megan Y Tan</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src = "scripts/scripts.js"></script>
+	</head>
+	
+	<body>
+		<!-- Navigation bar -- copy onto every page -->
+		<nav class = "navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+		
+			<!-- Brand -->
+			<a class = "navbar-brand text-muted" id= "contact-nav-brand" href = "index.html">Megan Y Tan</a>
+			
+			<!-- Collapse button -->
+			<button class = "navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+				<span class = "navbar-toggler-icon"></span>
+			</button>
+			
+			<!-- Actual navbar links-->
+			<div class = "collapse navbar-collapse" id = "myNavbar">
+				<ul class = "navbar-nav">
+					<li class = "nav-item"><a class = "nav-link" href = "resume.html">Resume</a></li>
+					<li class = "nav-item"><a class = "nav-link" href = "projects.html">Projects</a></li>
+					<li class = "nav-item"><a class = "nav-link active" href = "contact.html">Contact Me</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!--Body of contact us page -->
+		<div class = "container padding-top">
+			<h1>Drop by,</h1>
+			<h2><span class = "text-light bg-dark">say hi!</span></h2>
+		</div>
+		<div class = "container">
+			<div class="row"><div class = "col-12">Whether you have an opportunity or want to collaborate, or simply want to ask questions, feel free to contact me!</div></div>
+			<hr class = "invisible-hr">
+			<div class = "row">
+				<div class = "col-lg-8 more-padding" id = "form"><!-- THIS IS THE FORM 1. alert message received, 2. clear form-->
+				<!--
+					<table>
+						<tr><td><input class = "input-type slight-padding" type="text" placeholder = "Name" name = "Name" required="required" data-error="Please enter your name."></td></tr>
+						<tr><td><input class = "input-type slight-padding"type="email" placeholder = "Email" name = "Email" required="required" data-error="Please enter your email."></td></tr>
+						<tr><td><textarea  class = "input-type slight-padding" name="Message" placeholder="Message" rows="4" required="required" data-error="Please leave a message."></textarea></td></tr>
+						<tr><td> <input type="submit" class="btn btn-dark btn-send" value="Send message"> </tr></td>
+					</table>
+					<hr class="invisible-hr">-->
+					<form action="contact.php" method="post" role="form" id="contact-form">
+					  <div class = "messages"></div>
+					  <div class="form-group">
+						<input id="form_name" type="text" name="name" class="form-control input-type" placeholder="Name" required="required" data-error="Please enter your name.">
+					  </div>
+					  <div class="form-group">
+						<input id="form_email" type="email" name="email" class="form-control input-type" placeholder="Email" required="required" data-error="Valid email is required.">
+					  </div>
+					  
+					  <div class="form-group">
+						<textarea id="form_message" name="message" class="form-control input-type" placeholder="Message" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+					  </div>
+					  
+					  <input type="submit" class="btn btn-dark" value="Send message">
+					</form>
+					<hr class="invisible-hr">
+				</div>
+				
+				<div class = "col-lg-4" >
+						Connect with me:
+						<h6><a href = "mailto: meganytan@gmail.com" class="text-muted">meganytan@gmail.com</a></h6>
+						<h6><a href = "tel:16462406370" class = "text-muted">646 240 6370</a></h6>
+						<table>
+							<tr>
+                                <th><a href="www.linkedin.com/in/meganytan"><i class="fa fa-linkedin-square icon-style text-dark"></i></a></th>
+                                <th><a href="www.github.com/meganytan"><i class="fa fa-github icon-style text-dark"></i></a></th>
+							</tr>
+						</table>
+					
+				</div>
+			
+			</div>
+			
+		</div>
+	</body>
+</html>
