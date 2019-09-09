@@ -1,25 +1,11 @@
-/*inheritance stuff*/
-.image, .card {
-  border: #707070 solid 2px; }
+/*text*/
+.small-text {
+  font-size: 14px; }
 
-/*front page*/
-#info {
-  position: fixed;
-  bottom: 0%;
-  width: 100%; }
+.widespace {
+  letter-spacing: .15em; }
 
-/*contacts page*/
-th {
-  padding: 1em;
-  padding-left: 0; }
-
-.input-type {
-  max-width: 75%; }
-
-.icon-style {
-  font-size: 36px; }
-
-/*general*/
+/*general styling for specific stuff*/
 .invisible-hr {
   visibility: hidden;
   margin-top: 1.5em; }
@@ -35,14 +21,27 @@ th {
 .bg-gray {
   background-color: #eee; }
 
-/*text related*/
-.widespace {
-  letter-spacing: .15em; }
+.image, .card {
+  border: #707070 solid 2px; }
 
-.small-text {
-  font-size: 14px; }
+/*front page specific*/
+#info {
+  position: fixed;
+  bottom: 0%;
+  width: 100%; }
 
-/*margins*/
+/*table and form on contacts page*/
+th {
+  padding: 1em;
+  padding-left: 0; }
+
+.input-type {
+  max-width: 75%; }
+
+.icon-style {
+  font-size: 36px; }
+
+/*padding stuff*/
 .no-margin {
   margin: 0%; }
 
@@ -51,9 +50,6 @@ th {
 
 .more-padding {
   margin-bottom: 1.5em; }
-
-.top-padding {
-  padding-top: 1em; }
 
 .left-padding {
   padding-left: 2em; }
@@ -65,27 +61,39 @@ th {
 .padding-bottom {
   padding-bottom: 1em; }
 
+.top-padding {
+  padding-top: 1em; }
+
 /*Card styling goes here*/
 .card {
-  margin: 0 auto;
+  margin: 1em;
   /* Added */
   float: none;
-  /* Added */
-  margin-bottom: 10px;
-  /* Added */
-  margin-top: 10px; }
+  /* Added */ }
 
-.card-title {
+#hover-card-title {
   opacity: 0; }
-
-.card:hover {
-  opacity: 0.6; }
-  .card:hover .card-title {
+.card-hide{
+    opacity: 0;
+}
+.card:hover .card-img-top{
+  opacity: 0.3;}
+  .card:hover #hover-card-title {
+    opacity: 1; }
+.card:hover .card-hide{
     opacity: 1;
-    color: black; }
+    font-size: 16;
+}
 
+/*
+.card:hover .card-title{
+	opacity: 1;
+}*/
 /* card styling ends here*/
-/*media*/
+/*media stuff here*/
+@media (min-width: 801px) {
+  #intro::before {
+    content: "hello, world! \A this is megan."; } }
 @media (max-width: 800px) {
   #intro::before {
     display: block;
@@ -100,8 +108,5 @@ th {
 
   #projects-nav-brand::after {
     content: " /projects"; } }
-@media (min-width: 801px) {
-  #intro::before {
-    content: "hello, world! \A this is megan."; } }
 
 /*# sourceMappingURL=style.css.map */

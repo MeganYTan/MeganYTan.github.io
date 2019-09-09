@@ -76,12 +76,12 @@ th{
         float: none; /* Added */
         
 }
-.card-title{
+#hover-card-title{
 	opacity:0;
 }
 .card:hover{
 	opacity: 0.8;
-    .card-title{
+    #hover-card-title{
         opacity: 1;
     }
 }
